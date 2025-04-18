@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Analysis | Data Consultant & Sustainability Analyst</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sustainability.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="logo-text">DataSustain</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sustainability.html">Sustainability Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="sustainability-header" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <h1>Sustainability Analysis & Carbon Emissions Calculation</h1>
+                    <p class="lead">Automation and visualization for effective carbon footprint management</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Methodology Section -->
+    <section class="methodology-section" id="methodology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Methodology</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="methodology-text">
+                        My sustainability analysis approach combines data science expertise with best practices 
+                        in life cycle assessment (LCA) and carbon accounting. I rely on internationally recognized 
+                        methodologies like the GHG Protocol and ISO 14064 to ensure accurate and comparable results.
+                    </p>
+                    
+                    <div class="methodology-steps">
+                        <div class="methodology-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Data Extraction</h3>
+                                <p>Automated collection of activity data from multiple sources (ERP, IoT, energy management systems, etc.)</p>
+                            </div>
+                        </div>
+                        <div class="methodology-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Emission Factors Integration</h3>
+                                <p>Use of reference databases (ADEME, Agribalyse, DEFRA, etc.) to apply appropriate emission factors</p>
+                            </div>
+                        </div>
+                        <div class="methodology-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Calculation & Modeling</h3>
+                                <p>Application of advanced algorithms to calculate emissions and model different scenarios</p>
+                            </div>
+                        </div>
+                        <div class="methodology-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Visualization & Reporting</h3>
+                                <p>Creation of interactive dashboards for informed decision-making and standards-compliant reporting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-title">
+                <h2>Carbon Emissions Calculator</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="calculator-container">
+                        <div class="calculator-intro">
+                            <p>
+                                Use this interactive tool to estimate greenhouse gas emissions associated 
+                                with different activities. The calculator uses emission factors from 
+                                ADEME and Agribalyse databases to provide accurate estimates.
+                            </p>
+                        </div>
+                        
+                        <div class="calculator-form">
+                            <h3>Data Input</h3>
+                            <form id="emission-calculator-form">
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="activity-type">Activity Type</label>
+                                            <select class="form-control" id="activity-type">
+                                                <option value="transport">Transport</option>
+                                                <option value="energy">Energy Consumption</option>
+                                                <option value="food">Food</option>
+                                                <option value="materials">Materials & Products</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="activity-subtype">Subcategory</label>
+                                            <select class="form-control" id="activity-subtype">
+                                                <option value="car">Car</option>
+                                                <option value="plane">Plane</option>
+                                                <option value="train">Train</option>
+                                                <option value="bus">Bus</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="quantity">Quantity</label>
+                                            <input type="number" class="form-control" id="quantity" placeholder="Ex: 100">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="unit">Unit</label>
+                                            <select class="form-control" id="unit">
+                                                <option value="km">Kilometers</option>
+                                                <option value="kwh">kWh</option>
+                                                <option value="kg">Kilograms</option>
+                                                <option value="l">Liters</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label for="details">Additional Details</label>
+                                            <select class="form-control" id="details">
+                                                <option value="petrol">Petrol</option>
+                                                <option value="diesel">Diesel</option>
+                                                <option value="electric">Electric</option>
+                                                <option value="hybrid">Hybrid</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary" id="calculate-btn">Calculate Emissions</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="calculator-results mt-5" id="calculator-results" style="display: none;">
+                            <h3>Results</h3>
+                            <div class="results-container">
+                                <div class="result-item">
+                                    <div class="result-label">Total Emissions:</div>
+                                    <div class="result-value" id="total-emissions">-- kg CO2e</div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="result-label">Tree Equivalent:</div>
+                                    <div class="result-value" id="tree-equivalent">-- trees for 1 year</div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="result-label">Data Source:</div>
+                                    <div class="result-value" id="data-source">ADEME Database</div>
+                                </div>
+                            </div>
+                            
+                            <div class="results-chart mt-4">
+                                <canvas id="emissions-chart"></canvas>
+                            </div>
+                            
+                            <div class="results-actions mt-4 text-center">
+                                <button class="btn btn-outline-primary" id="download-results">Download Results</button>
+                                <button class="btn btn-outline-secondary" id="reset-calculator">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Databases Section -->
+    <section class="databases-section" id="databases">
+        <div class="container">
+            <div class="section-title">
+                <h2>Emission Factor Databases</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="databases-intro">
+                        Carbon emissions calculations rely on reliable and up-to-date emission factor databases.
+                        Here are the main sources I use in my sustainability analysis projects:
+                    </p>
+                    
+                    <div class="database-cards">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="database-card">
+                                    <div class="database-logo">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <h3>ADEME Carbon Database</h3>
+                                    <p class="database-description">
+                                        French national reference database for calculating greenhouse gas emissions.
+                                        Covers all activity sectors with over 1000 emission factors.
+                                    </p>
+                                    <div class="database-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Annual updates</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Compliance with French regulations</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Detailed documentation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="database-card">
+                                    <div class="database-logo">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <h3>Agribalyse</h3>
+                                    <p class="database-description">
+                                        Life cycle inventory database for agricultural and food products.
+                                        Provides environmental indicators for over 2500 products.
+                                    </p>
+                                    <div class="database-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Specific to agri-food sector</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Complete LCA methodology</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Contextualized data for France</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="database-card">
+                                    <div class="database-logo">
+                                        <i class="fas fa-globe-europe"></i>
+                                    </div>
+                                    <h3>DEFRA</h3>
+                                    <p class="database-description">
+                                        UK database of conversion factors for greenhouse gas reporting.
+                                        International reference for many sectors.
+                                    </p>
+                                    <div class="database-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Annual updates</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>International factors</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Transparent methodology</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-4">
+                                <div class="database-card">
+                                    <div class="database-logo">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                    <h3>Ecoinvent</h3>
+                                    <p class="database-description">
+                                        International life cycle inventory database covering thousands of industrial processes.
+                                        Scientific reference for detailed analyses.
+                                    </p>
+                                    <div class="database-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Global coverage</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>High scientific accuracy</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Detailed industrial data</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-flow mt-5">
+                        <h3 class="text-center mb-4">Data Flow & Integration</h3>
+                        <div class="data-flow-diagram">
+                            <div class="flow-step">
+                                <div class="flow-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="flow-content">
+                                    <h4>Data Sources</h4>
+                                    <p>Extraction of emission factors from ADEME, Agribalyse, etc. databases</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div class="flow-content">
+                                    <h4>Transformation</h4>
+                                    <p>Normalization, harmonization and data enrichment</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="flow-content">
+                                    <h4>Unified Storage</h4>
+                                    <p>Relational database optimized for calculations</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="flow-content">
+                                    <h4>Calculation Engine</h4>
+                                    <p>Algorithms to apply factors to activity data</p>
+                                </div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="flow-content">
+                                    <h4>Visualization</h4>
+                                    <p>Interactive dashboards and customized reports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies-section" id="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Case Studies</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="case-studies">
+                        <div class="case-study">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <div class="case-study-image">
+                                        <img src="../assets/images/project1-placeholder.jpg" alt="Case study 1" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="case-study-content">
+                                        <h3>Carbon Footprint Automation for an Industrial Group</h3>
+                                        <div class="case-meta">
+                                            <span class="case-industry">Manufacturing Industry</span>
+                                            <span class="case-duration">Duration: 6 months</span>
+                                        </div>
+                                        <p class="case-description">
+                                            Development of an automated data collection and analysis system for calculating 
+                                            the carbon footprint of an industrial group operating at 12 sites across Europe. 
+                                            The system reduced data collection time by 80% and identified emission reduction 
+                                            opportunities of 15%.
+                                        </p>
+                                        <div class="case-highlights">
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Integration of 5 different data sources</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Real-time dashboard for emissions tracking</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Compliance with CSRD reporting requirements</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <div class="case-study-content">
+                                        <h3>Supply Chain Carbon Footprint Optimization</h3>
+                                        <div class="case-meta">
+                                            <span class="case-industry">Logistics & Transportation</span>
+                                            <span class="case-duration">Duration: 8 months</span>
+                                        </div>
+                                        <p class="case-description">
+                                            Analysis and optimization of the carbon footprint of an international supply chain 
+                                            for a food distributor. Development of a predictive model to simulate different 
+                                            transport and supply scenarios to minimize emissions while respecting operational 
+                                            constraints.
+                                        </p>
+                                        <div class="case-highlights">
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>22% reduction in supply chain emissions</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Annual savings of €1.2 million</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Integration with existing ERP system</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="case-study-image">
+                                        <img src="../assets/images/project2-placeholder.jpg" alt="Case study 2" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="case-study">
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <div class="case-study-image">
+                                        <img src="../assets/images/project3-placeholder.jpg" alt="Case study 3" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="case-study-content">
+                                        <h3>ESG Dashboard for Investment Fund</h3>
+                                        <div class="case-meta">
+                                            <span class="case-industry">Finance & Investment</span>
+                                            <span class="case-duration">Duration: 4 months</span>
+                                        </div>
+                                        <p class="case-description">
+                                            Design and development of an interactive dashboard for analyzing ESG performance 
+                                            of an investment portfolio. Integration of multiple data sources and creation of 
+                                            a proprietary score to evaluate the climate performance of portfolio companies.
+                                        </p>
+                                        <div class="case-highlights">
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Analysis of over 200 companies</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Interactive visualizations for decision support</span>
+                                            </div>
+                                            <div class="highlight-item">
+                                                <i class="fas fa-check"></i>
+                                                <span>Alignment with TCFD recommendations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 DataSustain - Data Consultant & Sustainability Analyst</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/calculator.js"></script>
+</body>
+</html>
